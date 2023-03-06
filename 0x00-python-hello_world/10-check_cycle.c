@@ -5,7 +5,7 @@
  * @list: input parameter
  * Return: 1(there is cycle), 0(there is no cycle)
  */
-int check_cycle(listint_t *list);
+int check_cycle(listint_t *list)
 {
 	listint_t *one = list, *two = list;
 
