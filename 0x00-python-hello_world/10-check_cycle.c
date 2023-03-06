@@ -7,7 +7,7 @@
  */
 int check_cycle(listint_t *list);
 {
-	listint_t *one = head, *two = head;
+	listint_t *one = list, *two = list;
 
 	while (one && two && two->next)
 	{
@@ -15,7 +15,7 @@ int check_cycle(listint_t *list);
 		two = two->next->next;
 		if (one == two)
 		{
-			one = head;
+			one = list;
 			while (one != two)
 			{
 				one = one->next;
