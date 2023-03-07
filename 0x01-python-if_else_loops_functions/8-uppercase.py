@@ -5,5 +5,5 @@ def uppercase(str):
             letter = ord(str[i]) + ord('A') - ord('a')
         else:
             letter = ord(str[i])
-        print("{:c}".format(letter))
+        print("{:c}".format(letter), end="")
     print("")
