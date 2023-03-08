@@ -22,7 +22,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if ((**head).n > number)
 	{
 		(*tmp).next = *head;
-		(*tmp).n = n;
+		(*tmp).n = number;
 		*head = tmp;
 		return (tmp);
 	}
@@ -30,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 	tmp3 = (**head).next;
 	while (tmp3 != NULL)
 	{
-		if (tmp3.n > number)
+		if ((*tmp3).n > number)
 		{
 			(*tmp).n = n;
 			(*tmp).next = (*tmp2).next;
