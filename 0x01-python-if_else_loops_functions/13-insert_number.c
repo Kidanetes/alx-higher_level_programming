@@ -28,17 +28,20 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	tmp2 = *head;
 	tmp3 = (**head).next;
-	while (tmp2 != NULL)
+	while (tmp3 != NULL)
 	{
 		if (tmp3.n > number)
 		{
 			(*tmp).n = n;
 			(*tmp).next = (*tmp2).next;
-			(*tmp2).next = tmp3;
+			(*tmp2).next = tmp;
 			return (tmp);
 		}
 		tmp2 = (*tmp2).next;
 		tmp3 = (*tmp3).next;
 	}
-	return (NULL);
+	(*tmp).n = n;
+	(*tmp).next = (*tmp2).next;
+	(*tmp2).next = tmp;
+	return (tmp);
 }
