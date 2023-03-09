@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    import sys
     numOfArgs = len(sys.argv) - 1
     if numOfArgs == 0:
         print("{:d} arguments.".format(numOfArgs))
