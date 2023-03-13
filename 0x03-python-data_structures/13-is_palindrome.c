@@ -27,16 +27,16 @@ int is_palindrome(listint_t **head)
 	{
 		arr[i] = (*tmp).n;
 		tmp = (*tmp).next;
-		if (n % 2 == 0 && i > n / 2)
+		if (num % 2 == 0 && i > num / 2)
 		{
-			if (a[n / 2 - j] != a[n / 2 + 1 + j])
+			if (arr[num / 2 - j] != arr[num / 2 + 1 + j])
 				return (0);
 			j++;
 		}
-		if (n % 2 != 0 && i >= (n + 1) / 2)
+		if (num % 2 != 0 && i >= (num + 1) / 2)
 		{
 			
-			if (a[(n + 1) / 2 - j] != a[(n + 1)/ 2  + j])
+			if (arr[(num + 1) / 2 - j] != arr[(num + 1)/ 2  + j])
 				return (0);
 			j++;
 		}		
