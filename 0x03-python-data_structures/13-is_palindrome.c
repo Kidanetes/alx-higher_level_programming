@@ -9,44 +9,30 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
+	int num, i = 0, j;
+	int *arr;
+
 	if (*head == NULL || (**head).next == NULL)
 		return (1);
 	tmp = *head;
-	reverse_listint(head);
 	while (*head != NULL)
 	{
-		if ((**head).n != (*tmp).n)
-			return (0);
+		num++;
 		*head = (**head).next;
+	}
+	arr = malloc(sizeof(int) * num);
+	if (arr == NULL)
+		return (0);
+	while (i < num)
+	{
+		arr[i] = (*tmp).n;
 		tmp = (*tmp).next;
+		i++;
+	}
+	for (i = 0, j = num - 1; i < j; i++, j--)
+	{
+		if (arr[i] != arr[j])
+			return (0);
 	}
 	return (1);
 }
-/**
-* reverse_listint - reverse the list
-* @head: head node
-*
-* Return: address of the new head
-*/
-listint_t *reverse_listint(listint_t **head)
-{
-	listint_t *tmp1, *tmp2 = NULL;
-
-	if (*head == NULL)
-		return (NULL);
-	tmp1 = *head;
-	if ((**head).next == NULL)
-		return (*head);
-	while (*head != NULL)
-	{
-		tmp1 = (*head)->next;
-		(*head)->next = tmp2;
-		tmp2 = *head;
-		*head = tmp1;
-	}
-	*head = tmp2;
-	return (*head);
-}
-
-
-
