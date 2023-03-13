@@ -29,7 +29,17 @@ int is_palindrome(listint_t **head)
 		tmp = (*tmp).next;
 		i++;
 	}
-	for (i = 0, j = num - 1; i < j; i++, j--)
+	if (num % 2 == 0)
+	{
+		i = num / 2;
+		j = num / 2 + 1;
+	}
+	else
+	{
+		i = (num + 1) / 2 - 1;
+		j = (num + 1) / 2 + 1;
+	}
+	for (; i >= 0 && j < num; i--, j++)
 	{
 		if (arr[i] != arr[j])
 			return (0);
