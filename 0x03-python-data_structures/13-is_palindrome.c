@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
-	int num, i = 0, j;
+	int num = 0, i = 0, j;
 	int *arr;
 
 	if (*head == NULL || (**head).next == NULL)
