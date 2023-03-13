@@ -10,6 +10,7 @@
 int main(void)
 {
     listint_t *head;
+    int i;
 
     head = NULL;
     add_nodeint_end(&head, 1);
@@ -22,10 +23,11 @@ int main(void)
     add_nodeint_end(&head, 972);
     add_nodeint_end(&head, 17);
     add_nodeint_end(&head, 1);*/
+    i = is_palindrome(&head);
     print_listint(head);
     print_listint(reverse_listint(&head));
 
-    if (is_palindrome(&head) == 1)
+    if (i == 1)
         printf("Linked list is a palindrome\n");
     else
         printf("Linked list is not a palindrome\n");
