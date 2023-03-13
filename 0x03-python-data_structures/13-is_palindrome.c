@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
-	int num = 0, i = 0, j;
+	int num = 0, i = 0, j = 0;
 	int *arr;
 
 	if (*head == NULL || (**head).next == NULL)
@@ -27,13 +27,26 @@ int is_palindrome(listint_t **head)
 	{
 		arr[i] = (*tmp).n;
 		tmp = (*tmp).next;
+		if (n % 2 == 0 && i > n / 2)
+		{
+			if (a[n / 2 - j] != a[n / 2 + 1 + j])
+				return (0);
+			j++;
+		}
+		if (n % 2 != 0 && i >= (n + 1) / 2)
+		{
+			
+			if (a[(n + 1) / 2 - j] != a[(n + 1)/ 2  + j])
+				return (0);
+			j++;
+		}		
 		i++;
 	}
-	for (i = 0, j = num - 1; i < j; i++, j--)
+	/**for (i = 0, j = num - 1; i < j; i++, j--)
 	{
 		if (arr[i] != arr[j])
 			return (0);
-	}
+	}*/
 	free(arr);
 	return (1);
 }
