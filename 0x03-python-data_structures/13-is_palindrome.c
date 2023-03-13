@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 	tmp = malloc(sizeof(listint_t));
 	if (tmp == NULL)
 		return (0);
-	tmp = reverse_listint(*head);
+	tmp = reverse_listint(head);
 	while (*head != NULL)
 	{
 		if ((**head).n != (*tmp).n)
