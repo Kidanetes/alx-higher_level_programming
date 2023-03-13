@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
-	if (*head == NULL)
+	if (*head == NULL || (**head).next == NULL)
 		return (1);
 	tmp = malloc(sizeof(listint_t));
 	if (tmp == NULL)
