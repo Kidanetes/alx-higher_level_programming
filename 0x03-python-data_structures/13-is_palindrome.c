@@ -36,7 +36,7 @@ int is_palindrome(listint_t **head)
 	}
 	else
 	{
-		i = (num - 1) / 2; - 1;
+		i = (num - 1) / 2 - 1;
 		j = (num - 1) / 2 + 1;
 	}
 		
