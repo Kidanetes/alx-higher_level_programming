@@ -17,6 +17,7 @@ int is_palindrome(listint_t **head)
 	tmp = *head;
 	while (tmp != NULL)
 		tmp = (*tmp).next;
+	tmp = *head;
 	reverse_listint(head);
 	   print_listint(*head);
            print_listint(tmp);
@@ -29,7 +30,6 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
-#include "lists.h"
 /**
 * reverse_listint - reverse the list
 * @head: head node
