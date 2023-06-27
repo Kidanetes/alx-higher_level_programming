@@ -8,9 +8,9 @@ class Square:
     size(int): size of the square
     """
     def __init__(self, size=0):
-        if (size is not int):
+        if type(size) is int:
             if size >= 0:
-                self.__size = int(size)
+                self.__size = size
             else:
                 raise ValueError("size must be >= 0")
         else:
