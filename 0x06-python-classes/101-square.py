@@ -64,6 +64,7 @@ class Square:
             if i < self.__size - 1:
                 print()
         print()
+
     def __str__(self):
         """representation of square class"""
         str1 = ""
