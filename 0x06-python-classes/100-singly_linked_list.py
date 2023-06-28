@@ -73,11 +73,12 @@ class SinglyLinkedList:
     def __str__(self):
         """representation of single linked list"""
         str1 = ''
-        tmp = self.__head
-        while tmp.next_node is not None:
-            str1 = str1 + str(tmp.data)
-            str1 = str1 + '\n'
-            tmp = tmp.next_node
-        if tmp is not None:
-            str1 = str1 + str(tmp.data)
-            return str1
+        if self.__head is not None:
+            tmp = self.__head
+            while tmp.next_node is not None:
+                str1 = str1 + str(tmp.data)
+                str1 = str1 + '\n'
+                tmp = tmp.next_node
+            if tmp is not None:
+                str1 = str1 + str(tmp.data)
+        return str1
