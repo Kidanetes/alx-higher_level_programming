@@ -78,5 +78,4 @@ class Square:
                 str1 = str1 + "#"
             if i < self.__size - 1:
                 str1 = str1 + "\n"
-        str1 = str1 + "\n"
         return str1
