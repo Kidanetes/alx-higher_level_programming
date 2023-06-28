@@ -36,7 +36,7 @@ class Node:
         return self.__next_node
 
     @next_node.setter
-    def next_node(self, next_node=None):
+    def next_node(self, next_node):
         if next_node is None or type(next_node) is Node:
             self.__next_node = next_node
         else:
