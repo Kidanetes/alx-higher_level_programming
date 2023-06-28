@@ -52,8 +52,8 @@ class SinglyLinkedList:
         """insert value into sorted list"""
         obj = Node(value)
         if self.__head is None:
-            self.__head = obj
             obj.next_node = None
+            self.__head = obj
         else:
             if value < self.__head.data:
                 obj.next_node = self.__head
