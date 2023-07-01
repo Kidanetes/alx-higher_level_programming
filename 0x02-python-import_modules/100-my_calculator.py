@@ -12,7 +12,7 @@ if __name__ == '__main__':
     fun = [add, sub, mul, div]
     for i in range(len(op)):
         if op[i] == op_s:
-            print("{} {} {} = {}".format(a, op_s, b, fun[i](a,b)))
+            print("{} {} {} = {}".format(a, op_s, b, fun[i](a, b)))
             sys.exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
