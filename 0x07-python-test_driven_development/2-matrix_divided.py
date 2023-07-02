@@ -19,6 +19,10 @@ def matrix_divided(matrix, div):
         if type(i) is not list:
             raise TypeError(('matrix must be a matrix '
                             '(list of lists) of integers/floats'))
+        for k in i:
+            if type(k) is not int and type(k) is not float:
+                raise TypeError(('matrix must be a matrix '
+                                '(list of lists) of integers/floats'))
     for i in range(len(matrix)):
         if i != 0:
             if len(matrix[i]) != len(matrix[i - 1]):
