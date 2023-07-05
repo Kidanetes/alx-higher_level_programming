@@ -28,7 +28,7 @@ def matrix_divided(matrix, div):
             if len(matrix[i]) != len(matrix[i - 1]):
                 raise TypeError('Each row of the matrix '
                                 'must have the same size')
-    if not(type(div) is int or type(div) is float):
+    if not (type(div) is int or type(div) is float):
         raise TypeError('div must be a number')
     if div == 0:
         raise ZeroDivisionError('division by zero')
@@ -36,6 +36,6 @@ def matrix_divided(matrix, div):
     for i in matrix:
         k = []
         for j in i:
-            k.append((int((j / div) * 100)) / 100)
+            k.append(round((j / div), 2))
         new_matrix.append(k)
     return new_matrix
