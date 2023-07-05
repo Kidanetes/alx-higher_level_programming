@@ -40,7 +40,7 @@ def matrix_mul(m_a, m_b):
     returns: the product matrix
     """
     matrix_check(m_a, "m_a")
-    matrix_check(m_b, 'm_B')
+    matrix_check(m_b, 'm_b')
 
     if (len(m_a[0]) != len(m_b)):
         raise ValueError("m_a and m_b can't be multiplied")
