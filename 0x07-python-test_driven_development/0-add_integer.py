@@ -12,9 +12,9 @@ def add_integer(a, b=98):
     b(int or float): number
     returns: sum of a and b
     """
-    if not(type(a) is int or type(a) is float):
+    if not (type(a) is int or type(a) is float):
         raise TypeError('a must be an integer')
-    if not(type(b) is int or type(b) is float):
+    if not (type(b) is int or type(b) is float):
         raise TypeError('b must be an integer')
     a = int(a)
     b = int(b)
