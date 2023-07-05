@@ -1,4 +1,4 @@
-፧#!/usr/bin/python3
+#!/usr/bin/python3
 """this module contains two functions
 the first function checks if the matrix
 is legit, the second one multiplies the marices
