@@ -2,7 +2,10 @@
 """This Module contains the Rectangle Class"""
 
 
-class Rectangle(7-base_geometry.BaseGeometry):
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+class Rectangle(BaseGeometry):
     """class rectangle, a sub class of Base Geometry"""
 
     def __init__(self, width, height):
