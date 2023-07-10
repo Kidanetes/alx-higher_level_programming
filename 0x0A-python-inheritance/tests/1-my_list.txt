@@ -5,6 +5,8 @@ subclass of list"""
 >>> l1 = MyList()
 >>> l1
 []
+>>> l1.print_sorted()
+[]
 >>> l2 = MyList([1, 2, 3, 4])
 >>> l2
 [1, 2, 3, 4]
