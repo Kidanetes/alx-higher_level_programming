@@ -1,0 +1,34 @@
+"""test for BaseGometry class"""
+
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> obj = BaseGeometry()
+>>> obj.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
+>>> obj.integer_validator("var")
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> obj.integer_validator("var1", 15)
+>>> obj.integer_validator("var1", 0)
+Traceback (most recent call last):
+  ...
+ValueError: var1 must be greater than 0
+>>> obj.integer_validator("var1", -34)
+Traceback (most recent call last):
+  ...
+ValueError: var1 must be greater than 0
+>>> obj.integer_validator("var1", "hello")
+Traceback (most recent call last):
+  ...
+TypeError: var1 must be an integer
+>>> obj.integer_validator("var1", [1, 2, 3])
+Traceback (most recent call last):
+  ...
+TypeError: var1 must be an integer
+>>> obj.integer_validator("var1", 67.56)
+Traceback (most recent call last):
+  ...
+TypeError: var1 must be an integer
