@@ -1,0 +1,36 @@
+"""test file for MyList class
+subclass of list"""
+
+>>> MyList = __import__('1-my_list').MyList
+>>> l1 = MyList()
+>>> l1
+[]
+>>> l2 = MyList([1, 2, 3, 4])
+>>> l2
+[1, 2, 3, 4]
+>>> l3 = MyList()
+>>> l3.append(7)
+>>> l3.append(5)
+>>> l3.append(3)
+>>> l3
+[7, 5, 3]
+>>> l4 = MyList()
+>>> l4.append(4)
+>>> l4.append(3)
+>>> l4.append(8)
+>>> l4.append(6)
+>>> l4.append(2)
+>>> l4
+[4, 3, 8, 6, 2]
+>>> l3.print_sorted()
+[3, 5, 7]
+>>> l3
+[7, 5, 3]
+>>> l2.print_sorted()
+[1, 2, 3, 4]
+>>> l2
+[1, 2, 3, 4]
+>>> l4.print_sorted()
+[2, 3, 4, 6, 8]
+>>> l4
+[4, 3, 8, 6, 2]
