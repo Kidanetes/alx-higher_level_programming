@@ -7,6 +7,6 @@ class MyList(list):
     """Mylist is a subclass of List"""
     def print_sorted(self):
         """this method will sort a list"""
-        l1 = self[:]
-        l1.sort()
-        print(l1)
+        /*l1 = self[:]*/
+        /*l1.sort()*/
+        print(sorted(self))
