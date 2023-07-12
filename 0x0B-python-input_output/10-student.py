@@ -30,7 +30,7 @@ class Student:
             else:
                 x = self.__dict__.copy()
                 y = {}
-                for i, j in  x.items():
+                for i, j in x.items():
                     for k in attrs:
                         if i == k:
                             y[i] = j
