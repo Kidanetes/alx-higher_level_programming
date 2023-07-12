@@ -23,9 +23,10 @@ if __name__ == "__main__":
                         dict_x[i[-2]] = 1
                 size = size + int(i[-1])
             except (TypeError, ValueError, IndexError):
-                continue
-            count += 1
-            if count == 10:
+                pass
+            finally:
+                count += 1
+                if count == 10:
                 print("File size:", size)
                 for j in sorted(dict_x):
                     print("{}: {}".format(j, dict_x[j]))
