@@ -28,11 +28,12 @@ if __name__ == "__main__":
             if count == 10:
                 print("File size:", size)
                 for j in sorted(dict_x):
-                    print(j, dict_x[j])
-                    dict_x = {}
-                    count = 0
+                    print("{}: {}".format(j, dict_x[j]))
+                dict_x = {}
+                count = 0
+                size = 0
     except KeyboardInterrupt:
         print("File size:", size)
         for j in sorted(dict_x):
-            print(j, dict_x[j])
+            print("{}: {}".format(j, dict_x[j]))
         raise
