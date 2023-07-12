@@ -31,7 +31,6 @@ if __name__ == "__main__":
                     for j in sorted(dict_x):
                         print("{}: {}".format(j, dict_x[j]))
                     count = 0
-                    size = 0
     except KeyboardInterrupt:
         print("File size:", size)
         for j in sorted(dict_x):
