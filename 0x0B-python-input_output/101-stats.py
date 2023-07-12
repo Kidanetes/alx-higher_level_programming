@@ -14,8 +14,10 @@ if __name__ == "__main__":
 
     try:
         for i in sys.stdin:
-            i = i.split()
             try:
+                i = i.split()
+                count += 1
+                size = size + int(i[-1])
                 if i[-2] in status_codes:
                     if i[-2] in dict_x:
                         dict_x[i[-2]] += 1
@@ -23,14 +25,11 @@ if __name__ == "__main__":
                         dict_x[i[-2]] = 1
             except (TypeError, ValueError, IndexError):
                 pass
-            finally:
-                size = size + int(i[-1])
-                count += 1
-                if count == 10:
-                    print("File size:", size)
-                    for j in sorted(dict_x):
-                        print("{}: {}".format(j, dict_x[j]))
-                    count = 0
+            if count == 10:
+                print("File size:", size)
+                for j in sorted(dict_x):
+                    print("{}: {}".format(j, dict_x[j]))
+                count = 0
     except KeyboardInterrupt:
         print("File size:", size)
         for j in sorted(dict_x):
