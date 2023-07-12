@@ -42,6 +42,8 @@ class Student:
         args:
         json(dict): dictionary of attributes
         """
-        #for i, j in json.items():
-        #    setattr(self, i, j)
-        self.__dict__ = json.copy()
+        if json:
+            self.__dict__ = json.copy()
+        else:
+            self.__dict__ = {}
+
