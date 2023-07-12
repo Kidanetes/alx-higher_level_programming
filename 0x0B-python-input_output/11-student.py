@@ -2,9 +2,6 @@
 """this module contains a student classs"""
 
 
-import json
-
-
 class Student:
     """class student
     Attributes:
@@ -45,5 +42,6 @@ class Student:
         args:
         json(dict): dictionary of attributes
         """
-        for i, j in json.items():
-            setattr(self, i, j)
+        #for i, j in json.items():
+        #    setattr(self, i, j)
+        self.__dict__ = json.copy()
