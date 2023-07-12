@@ -21,10 +21,10 @@ if __name__ == "__main__":
                         dict_x[i[-2]] += 1
                     else:
                         dict_x[i[-2]] = 1
-                size = size + int(i[-1])
             except (TypeError, ValueError, IndexError):
                 pass
             finally:
+                size = size + int(i[-1])
                 count += 1
                 if count == 10:
                     print("File size:", size)
