@@ -4,7 +4,7 @@ Rectangle which is a sub class
 of Base class"""
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -93,3 +93,8 @@ class Rectangle(Base):
         if name == 'width' or name == 'height':
             if value <= 0:
                 raise ValueError(f"{name} must be > 0")
+
+    def area(self):
+        """return the area of the rectangle object"""
+        area = self.__width * self.__height
+        return area
