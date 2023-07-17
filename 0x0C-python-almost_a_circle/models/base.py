@@ -19,7 +19,7 @@ class Base:
         id(int): an id passed when an object is
         intialized
         """
-        if id:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects = Base.__nb_objects + 1
