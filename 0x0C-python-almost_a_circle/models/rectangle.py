@@ -72,7 +72,7 @@ class Rectangle(Base):
         """
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, y):
         self.__num_validate('y', y)
         self.__y = y
@@ -114,3 +114,19 @@ class Rectangle(Base):
         """simple represenation of an object"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -"
                 f" {self.__width}/{self.__height}")
+
+    def update(self, *args, **kwargs):
+        """update the rectangle object"""
+        if len(args) > 0:
+            attr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                if i < 5:
+                    setattr(self, attr[i], args[i])
+        else:
+            for i, k in kwargs.items():
+                setattr(self, str(i), k)
+
+    def to_dictionary(self):
+        """dictionary represenation of a Rectangle object"""
+        return {'id': self.id, 'width': self.__width,
+                'height': self.__height, 'x': self.__x, 'y': self.__y}

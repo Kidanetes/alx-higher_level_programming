@@ -4,6 +4,9 @@ base class
 """
 
 
+import json
+
+
 class Base:
     """Base class"""
     __nb_objects = 0
@@ -21,3 +24,46 @@ class Base:
         else:
             Base.__nb_objects = Base.__nb_objects + 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """json representation of an objects dictionary"""
+        if list_dictionaries == [] or list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """save json representation of an object to a file"""
+        list_dictionaries = []
+        for i in list_objs:
+            list_dictionaries.append(i.to_dictionary())
+        name = cls.__name__ + '.json'
+        with open(name, 'w', encoding='utf-8') as f:
+            f.write(cls.to_json_string(list_dictionaries))
+    @staticmethod
+    def from_json_string(json_string):
+        """return a list of dictionary representation from Json string"""
+        if json_string == "" or json_string is None:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create an object using a dictionary representation"""
+        if dictionary is not None and len(dictionary) > 0:
+            if cls.__name__ == 'Rectangle':
+                obj = cls(1, 1, 0, 0)
+            else:
+                obj = cls(1, 0, 0)
+            obj.update(**dictionary)
+            return obj
+
+    def load_from_file(cls):
+        """return a list of instances from a json file"""
+        name = cls.__name__ + '.json'
+        try:
+            with open(name, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return []
