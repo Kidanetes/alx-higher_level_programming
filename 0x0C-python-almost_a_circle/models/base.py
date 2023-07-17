@@ -41,6 +41,7 @@ class Base:
         name = cls.__name__ + '.json'
         with open(name, 'w', encoding='utf-8') as f:
             f.write(cls.to_json_string(list_dictionaries))
+    
     @staticmethod
     def from_json_string(json_string):
         """return a list of dictionary representation from Json string"""
