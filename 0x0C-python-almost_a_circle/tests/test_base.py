@@ -36,12 +36,12 @@ class TestBase(unittest.TestCase):
     def test_15(self):
         """Test static method to_json_string"""
 
-        d = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+        d = {'x': 4, 'width': 8, 'id': 1, 'height': 7, 'y': 2}
         json_d = Base.to_json_string([d])
         self.assertTrue(isinstance(d, dict))
         self.assertTrue(isinstance(json_d, str))
         self.assertCountEqual(
-            json_d, '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
+            json_d, '[{"x": 4, "width": 8, "id": 1, "height": 7, "y": 2}]')
         json_d_1 = Base.to_json_string([])
         self.assertEqual(json_d_1, "[]")
         json_d_2 = Base.to_json_string(None)
