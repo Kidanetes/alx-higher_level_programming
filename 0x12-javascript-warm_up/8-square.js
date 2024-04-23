@@ -9,7 +9,7 @@ if (arr[2] === undefined || isNaN(Number(arr[2]))) {
     let str1 = '';
     let j = 0;
     while (j < x) {
-      str1 += 'x';
+      str1 += 'X';
       j++;
     } console.log(str1);
     i++;
