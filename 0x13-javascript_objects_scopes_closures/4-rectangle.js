@@ -18,5 +18,20 @@ class Rectangle {
       }
     }
   }
+
+  rotate () {
+    if (this.width !== undefined) {
+      const tmp = this.width;
+      this.width = this.height;
+      this.height = tmp;
+    }
+  }
+
+  double () {
+    if (this.width !== undefined) {
+      this.width *= 2;
+      this.height *= 2;
+    }
+  }
 }
 module.exports = Rectangle;
