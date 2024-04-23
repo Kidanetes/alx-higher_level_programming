@@ -6,14 +6,15 @@ class Rectangle {
     if (!con1 && !cond2) {
       this.width = w; this.height = h;
     }
-  } 
-  print() {
+  }
+
+  print () {
     if (this.width !== undefined && this.height !== undefined) {
       for (let i = 0; i < this.height; i++) {
         let str1 = '';
-	for (let j = 0; j < this.width; j++) {
-	  str1 += 'X';
-	} console.log(str1);
+        for (let j = 0; j < this.width; j++) {
+          str1 += 'X';
+        } console.log(str1);
       }
     }
   }
