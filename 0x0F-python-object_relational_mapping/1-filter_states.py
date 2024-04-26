@@ -16,7 +16,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=MY_HOST, user=MY_USER,
                          passwd=MY_PASS, db=MY_DB, port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' \
+                ORDER BY id, name")
     l1 = cur.fetchall()
     for i in l1:
         print(i)
