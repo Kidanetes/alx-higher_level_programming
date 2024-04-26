@@ -17,7 +17,7 @@ if __name__ == "__main__":
                          passwd=MY_PASS, db=MY_DB, port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' \
-                ORDER BY id, name")
+                ORDER BY id;")
     l1 = cur.fetchall()
     for i in l1:
         print(i)
