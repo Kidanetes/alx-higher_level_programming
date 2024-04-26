@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""this module contain a python script which
+connects to the MySQLdb"""
+
+
 import MySQLdb
 from sys import argv
+
 
 if __name__ == "__main__":
     MY_HOST = "localhost"
