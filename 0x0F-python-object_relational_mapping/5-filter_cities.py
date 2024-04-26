@@ -25,6 +25,7 @@ if __name__ == "__main__":
         if i != len(l1) - 1:
             print(l1[i][0], end=", ")
         else:
-            print(l1[i][0])
+            print(l1[i][0], end="")
+    print()
     cur.close()
     db.close()
