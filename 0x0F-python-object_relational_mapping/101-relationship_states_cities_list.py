@@ -13,8 +13,7 @@ if __name__ == "__main__":
                            argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for i in (session.query(State).options(joinedload(State.cities)).
-              order_by(State.id)):
+    for i in (session.query(State).order_by(State.id)):
         print(f"{i.id}: {i.name}")
         for j in i.cities:
             print(f"\t{j.id}: {j.name}")
