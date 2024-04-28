@@ -16,4 +16,3 @@ class State(Base):
     __tablename__ = "states"
     id = Column(Integer, nullable=False, unique=True, primary_key=True)
     name = Column(String(50))
-    cities = relationship("City")
