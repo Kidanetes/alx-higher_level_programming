@@ -6,21 +6,21 @@ request(args[2], function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-      const obj = JSON.parse(body);
-      const dict1 = {};
-      let j;
-      for (let i = 0; i < obj.length; i++) {
-        j = '' + obj[i].userId;
-        if (j in dict1) {
-          if (obj[i].completed === true) {
-            dict1[j]++;
-          }
-        } else {
-          if (obj[i].completed === true) {
-            dict1[j] = 1;
-          }
-       }
+    const obj = JSON.parse(body);
+    const dict1 = {};
+    let j;
+    for (let i = 0; i < obj.length; i++) {
+      j = '' + obj[i].userId;
+      if (j in dict1) {
+        if (obj[i].completed) {
+          dict1[j]++;
+        }
+      } else {
+        if (obj[i].completed) {
+          dict1[j] = 1;
+        }
       }
+    }
     console.log(dict1);
   }
 });
