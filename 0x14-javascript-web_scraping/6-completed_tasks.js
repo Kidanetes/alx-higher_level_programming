@@ -4,7 +4,7 @@ const process = require('process');
 const args = process.argv;
 request(args[2], function (err, response, body) {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
     const obj = JSON.parse(body);
     const dict1 = {};
