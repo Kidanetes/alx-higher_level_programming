@@ -5,7 +5,7 @@ const args = process.argv;
 
 request(args[2], function (err, response, body) {
   if (err) {
-    console.log(err);
+    
   } else {
     const obj = JSON.parse(body);
     let j = 0;
