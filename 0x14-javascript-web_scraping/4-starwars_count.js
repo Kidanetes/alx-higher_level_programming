@@ -10,7 +10,7 @@ request(args[2], function (err, response, body) {
     const obj = JSON.parse(body);
     let j = 0;
     for (let i = 0; i < obj.results.length; i++) {
-      if (obj.results[i].characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+      if (obj.results[i].characters.includes('https://swapi-api.alx-tools.com/api/people/-/')) {
         j = j + 1;
       }
     }
