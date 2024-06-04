@@ -3,6 +3,7 @@ const request = require('request');
 const process = require('process');
 const args = process.argv;
 if (args.length <= 2)
+   console.log('0');
    return;
 request(args[2], function (err, response, body) {
   if (err) {
