@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const fs = require('fs')
 const request = require('request');
 const process = require('process');
 const args = process.argv;
@@ -9,22 +8,23 @@ request(url, async function (err, response, body) {
     console.log(err);
   } else {
     let obj = JSON.parse(body);
-    let dict1 = {}
+    const dict1 = {};
     let count = 0;
     const list1 = obj.characters;
     for (let i = 0; i < list1.length; i++) {
-      request(list1[i], function(err, response, body) {
+      request(list1[i], function (err, response, body) {
+        if (err) {
+          console.log(err);
+        }
         obj = JSON.parse(body);
         dict1[i + ''] = obj.name;
-	count++;
-	if (count === list1.length) {
+        count++;
+        if (count === list1.length) {
           for (let j = 0; j < count; j++) {
             console.log(dict1['' + j]);
-	  }
-	}
-	
-  });
+          }
+        }
+      });
+    }
   }
-}
 });
-
