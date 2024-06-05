@@ -11,10 +11,10 @@ request(args[2], function (err, response, body) {
     let list1;
     for (let i = 0; i < obj.results.length; i++) {
       list1 = obj.results[i].characters;
-      for (let k =0; k < list1.length; k++) {
+      for (let k = 0; k < list1.length; k++) {
         if (list1[k].endsWith('people/18/')) {
           j = j + 1;
-	}
+        }
       }
     }
     console.log(j);
